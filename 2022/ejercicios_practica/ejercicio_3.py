@@ -34,4 +34,15 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.scatter(x, y, c='forestgreen', marker='*', label='y=tan(x)')
+    ax.set_facecolor('lavender')
+    ax.set_title('TANGENTE DE X', fontsize=15)
+    ax.grid(ls='-.', lw=0.3)
+    ax.legend()
+
+    plt.show()
+
     print("terminamos")

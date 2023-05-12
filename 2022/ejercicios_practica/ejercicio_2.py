@@ -46,4 +46,17 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('EJERCICIO CON MATPLT', fontsize=16)
+    ax = fig.add_subplot()
+
+    ax.plot(x, y1, c='limegreen', lw=1.8, label='y=x^2')
+    ax.plot(x, y2, c='navy', lw=1.8, label='y=x^3')
+    ax.set_facecolor('mintcream')
+    ax.grid(ls='dashdot', lw=0.3)
+    ax.set_title('COMPARACION DE FUNCIONES', fontsize=14)
+    ax.legend()
+
+    plt.show()
+
     print("terminamos")

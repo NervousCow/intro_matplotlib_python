@@ -34,5 +34,15 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x, y, c='yellow', lw=1.5, label='y=x^2')
+    ax.set_facecolor('black')
+    ax.set_title('CUADRATICA', fontsize=16)
+    ax.grid(ls='dashdot', c='whitesmoke')
+    ax.legend()
+
+    plt.show()
 
     print("terminamos")
