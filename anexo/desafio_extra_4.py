@@ -54,4 +54,36 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax1 = fig.add_subplot(2, 2, 1)
+    ax2 = fig.add_subplot(2, 2, 2)
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+
+    ax1.plot(x, y1, c='grey', label='Y=X^2')
+    ax1.set_facecolor('burlywood')
+    ax1.set_title('CUADRATICA', c='navy', fontsize=16)
+    ax1.grid(ls='-.', lw=0.7)
+    ax1.legend()
+
+    ax2.plot(x, y2, c='darkorange', label='Y=X^3')
+    ax2.set_facecolor('burlywood')
+    ax2.set_title('CUBO', c='navy', fontsize=16)
+    ax2.grid(ls='-.', lw=0.7)
+    ax2.legend()
+
+    ax3.plot(x, y3, c='forestgreen', label='Y=X^4')
+    ax3.set_facecolor('burlywood')
+    ax3.set_title('CUARTA POTENCIA', c='navy', fontsize=16)
+    ax3.grid(ls='-.', lw=0.7)
+    ax3.legend()
+
+    ax4.plot(x, y4, c='royalblue', label='Y=√X')
+    ax4.set_facecolor('burlywood')
+    ax4.set_title('RAIZ', c='navy', fontsize=16)
+    ax4.grid(ls='-.', lw=0.7)
+    ax4.legend()
+
+    plt.show()
+
     print("terminamos")

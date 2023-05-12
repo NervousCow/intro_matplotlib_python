@@ -35,4 +35,14 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x, y, c='forestgreen', lw=2, ls='--', label='y=x^2')
+    ax.set_facecolor('whitesmoke')
+    ax.grid()
+    ax.legend()
+
+    plt.show()
+
     print("terminamos")
