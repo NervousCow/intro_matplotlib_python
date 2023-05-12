@@ -112,6 +112,27 @@ def bar_plot():
                 years.append(year)
                 poblacion.append(int(line['poblacion']))
 
+    # Here's how it works:
+    #                       1- The code reads a CSV file named 'poblacion.csv' using csv.DictReader(fi).
+    # This function treats the first row of the CSV file as the header and creates a dictionary 
+    # {'key': value} for each subsequent row, where the keys of the dictionary are the header column
+    # names, and the values are the corresponding values in each row.
+    # The code then iterates over each line (row) in the data object (which represents the CSV 
+    # file's contents AS A LIST OF DICTIONARIES) using the for line in data loop.
+    # Within each iteration, the 'year' field is extracted from the line dictionary and converted to
+    # an integer using int(line['year']). This value is assigned to the year variable.
+    # The code checks if the year value is present in the objetivos list using the if year in
+    # objetivos condition. If the condition is true (i.e., the year is in objetivos), the following
+    # code block is executed.
+    # Inside the code block, the year value is appended to the years list using years.append(year).
+    # Similarly, the 'poblacion' value from the line dictionary is extracted, converted to an
+    # integer, and appended to the poblacion list using poblacion.append(int(line['poblacion'])).
+
+    # This line appends the population value corresponding to the current year to the poblacion list.
+    # In summary, the code appends the 'poblacion' value to the poblacion list only if the
+    # corresponding 'year' value is present in the objetivos list. It ensures that the population
+    # value is associated with the desired year of interest.
+    
     fig = plt.figure()
     fig.suptitle('Población histórica mundial', fontsize=16, label='poblacion')
     ax = fig.add_subplot()
